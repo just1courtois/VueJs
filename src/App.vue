@@ -1,9 +1,24 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse d-flex justify-content-center" id="nav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <router-link class="nav-link" to="/">Home</router-link> 
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/about">About</router-link> 
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/windows">Windows</router-link>
+      </li>
+    </ul>
   </div>
-  <router-view/>
+</nav>
+<router-view/>
 </template>
 
 <style>
