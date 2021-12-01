@@ -11,7 +11,7 @@
         <li v-for="item in info" v-bind:key="item.id" class="list-group-item d-block">
           
           <strong>{{ item.name }}</strong>
-          <i class="bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#RenameModal"></i><br>
+          <i class="add bi bi-pencil-fill" data-bs-toggle="modal" data-bs-target="#RenameModal"></i><br>
           Room id : {{item.roomId}}
           <div class="form-check form-switch">
             <div v-if="item.windowStatus==='OPEN'">
@@ -177,9 +177,16 @@ export default{
               })
             })
           },
-          createItem(){
+          createItem(){ //axios didn't work so I used
             var id = parseFloat(this.picked);
-             axios.post('http://justin-courtois.cleverapps.io/api/windows/createByRoom/'+id)
+             fetch('http://justin-courtois.cleverapps.io/api/windows/createByRoom/'+id, {
+                method: 'POST',
+                headers: {
+                    'accept': '*/*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({"id":0,"name":"new room","roomName":"room","windowStatus":"CLOSED"})
+            })
              .then(
               Swal.fire({
                 title: 'Created',
@@ -204,7 +211,7 @@ export default{
             axios.put('http://justin-courtois.cleverapps.io/api/windows/rename/'+id+'/{name}?name='+name)
              .then(
               Swal.fire({
-                title: 'Created',
+                title: 'Renamed',
                 text: 'Press "Ok" to refresh',
                 icon: 'success',
                 confirmButtonText: 'Ok'
@@ -257,8 +264,13 @@ li{
   
   
 }
+
+.add{
+  margin-left:5px;
+}
 .add:hover{
   color: #42b983;
+  
 }
 
 .delete{

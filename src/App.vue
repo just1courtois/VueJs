@@ -1,6 +1,6 @@
 <template>
   
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Faircorp</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,5 +52,12 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+#main_navbar{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 5;
 }
 </style>
