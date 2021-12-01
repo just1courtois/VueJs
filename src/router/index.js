@@ -21,6 +21,17 @@ const routes = [
     name: 'Windows',
     component: () => import(/* webpackChunkName: "windows" */ '../views/Windows.vue')
   },
+  {
+    path: '/heaters',
+    name: 'Heaters',
+    component: () => import(/* webpackChunkName: "heaters" */ '../views/Heaters.vue')
+  },
+  {
+    path: '/rooms',
+    name: 'Rooms',
+    component: () => import(/* webpackChunkName: "heaters" */ '../views/Rooms.vue')
+  },
+  
 
 ]
 
