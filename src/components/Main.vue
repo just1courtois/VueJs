@@ -6,15 +6,15 @@
     </p>
     <h3>What is currently working :</h3>
     <ul>
-      <li><p>Load, switch and delete windows</p></li>
+      <li><p>Load, switch, create and delete windows</p></li>
       <li><p>Load, switch and delete heaters</p></li>
-      <li><p>Load and delete rooms</p></li>
-      <li><p>Rename Windows</p></li>
-      <li><p>reactive design (ctrl+shit+m on firefow)</p></li>
+     
+      <li><p>Rename Windows, heaters and rooms</p></li>
+      <li><p>reactive design (ctrl+shit+m on firefox)</p></li>
     </ul>
     <h3>What is not working</h3>
     <ul>
-      <li><p>create new room, heater or window (error 400)</p></li>
+      <li><p>create new room, heater (error 500, internal server : backend issue)</p></li>
       <li><p>Buildings are currently not supported</p></li>
     </ul>
     <h3>Usefull resources</h3>
